@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="Widget_Query" name="widget_query" native="true"/>
+    </item>
+    <item>
+     <widget class="QTreeWidget" name="widget_tree">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="dragEnabled">
+       <bool>true</bool>
+      </property>
+      <property name="dragDropMode">
+       <enum>QAbstractItemView::DragOnly</enum>
+      </property>
+      <column>
+       <property name="text">
+        <string>View</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item>
+     <widget class="Widget_Editor" name="widget_editor" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>395</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="bar_status">
+   <property name="sizeGripEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="bar_menu">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>480</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionJOE_Editor"/>
+    <addaction name="actionShow_Query_Widget"/>
+    <addaction name="actionTree_Collapse_All"/>
+    <addaction name="actionTree_Expand_All"/>
+    <addaction name="actionFocus_Tree"/>
+    <addaction name="actionSave_Note"/>
+    <addaction name="actionInsert_or_Goto_Tree_Item"/>
+    <addaction name="actionBackward"/>
+    <addaction name="actionForward"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionImport_Phatnotes_File"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuTools"/>
+  </widget>
+  <action name="actionShow_Query_Widget">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/icon/img/filter.svg</normaloff>:/icon/img/filter.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Filter</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Q</string>
+   </property>
+  </action>
+  <action name="actionJOE_Editor">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/icon/img/reinhardticons-0.10-svg/scalable/actions/filenew.svg</normaloff>:/icon/img/reinhardticons-0.10-svg/scalable/actions/filenew.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Jump or Execute a Note or new</string>
+   </property>
+   <property name="toolTip">
+    <string>Jump or Execute a note blank or not.</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+E</string>
+   </property>
+  </action>
+  <action name="actionTree_Collapse_All">
+   <property name="text">
+    <string>Tree Collapse All</string>
+   </property>
+   <property name="shortcut">
+    <string>C</string>
+   </property>
+  </action>
+  <action name="actionTree_Expand_All">
+   <property name="text">
+    <string>Tree Expand All</string>
+   </property>
+   <property name="shortcut">
+    <string>E</string>
+   </property>
+  </action>
+  <action name="actionFocus_Tree">
+   <property name="text">
+    <string>Focus Tree</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+T</string>
+   </property>
+  </action>
+  <action name="actionSave_Note">
+   <property name="text">
+    <string>Save Note</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionInsert_or_Goto_Tree_Item">
+   <property name="text">
+    <string>Insert or Goto Tree Item</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionImport_Phatnotes_File">
+   <property name="text">
+    <string>Import Phatnotes File</string>
+   </property>
+  </action>
+  <action name="actionBackward">
+   <property name="text">
+    <string>Backward</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionForward">
+   <property name="text">
+    <string>Forward</string>
+   </property>
+   <property name="toolTip">
+    <string>Forward</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Widget_Query</class>
+   <extends>QWidget</extends>
+   <header>widget_query.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Widget_Editor</class>
+   <extends>QWidget</extends>
+   <header>widget_editor.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="icon.qrc"/>
+ </resources>
+ <connections/>
+</ui>
