@@ -5,4 +5,6 @@ Discipline is just an attempt to implement some ideas on note management. I have
 * Phatnotes import.
 * Quick filter.
 
+![alt tag](https://raw.github.com/sharpevo/discipline/master/screenshot.jpg)
+
 Now I am trying Zim + Encfs + Dropbox, along with the theory of concept-map, to fix the architecture rather than what Discipline does.
